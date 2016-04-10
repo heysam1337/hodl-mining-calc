@@ -1,16 +1,22 @@
 // replace these with current numbers 
+
 var tempNetHashRate = 171419; 
 var tempReward = 28050; // daily coins generated on the network
 
 var netHashRate = tempNetHashRate;
-var reward = tempNetward;
+var reward = tempReward;
 
 // earnings per day
-function calcReward(){
-	$("#earnings").text($("userHash").value * reward / netHashRate);
-}
+//function calcReward(){
+	//$("#earnings").text($("userHash").value * reward / netHashRate);
+	//$("#earnings").text($("userHash").val);
+	//alert ("incalc");
+//}
 
-$("#userHash").change(alert("changed"));
-//$("#userHash").change(calcReward());
 
-alert("changed");
+$("#userHash").keyup(function () {
+	var temp = $(this).val()
+	$("#earnings").text(temp * reward / netHashRate);
+});
+
+
