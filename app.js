@@ -3,9 +3,9 @@ var tempNetHashRate = 126700;
 var tempReward = 28050; // daily coins generated on the network
 var tempExchangeRate = 0.018;
 
-var netHashRate = tempNetHashRate;
-var exchangeRate = tempExchangeRate;
-var reward = tempReward;
+var netHashRate = hodlData.netHashRate;
+var exchangeRate = hodlData.exchangeRate;
+var reward = hodlData.reward;
 
 function updateReward() {
 		var dailyValue = ($("#userHash").val() * reward) / netHashRate;
@@ -18,4 +18,6 @@ function updateReward() {
 
 // attach events
 $("#userHash").keyup(updateReward);
+
+
 
