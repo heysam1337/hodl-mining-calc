@@ -16,8 +16,14 @@ function updateReward() {
 		$("#monthlyEarnings").text("Earnings per month: " + monthlyValue.toFixed(2) + " Hodl ($" + (monthlyValue * exchangeRate).toFixed(2) +")");
 }
 
+function calcInterest() {
+
+}
+
 // attach events
 $("#userHash").keyup(updateReward);
+$("#exchangeRate").text("Current Exchange Rate: $" + exchangeRate.toFixed(2));
+$("#netHashRate").text("Current Network Hashrate: " + netHashRate + " MH/s");
 
 
 
