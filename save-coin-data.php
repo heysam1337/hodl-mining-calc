@@ -25,6 +25,6 @@
 	$exchangeRate = $resp1->hodl_btc->last * $resp2->btc_usd->last;
 
 	$file = 'hodldata.js';
-	$data = 'var hodlData = {"netHashRate":126700,"exchangeRate":'. $exchangeRate . ',"reward":28050};';
+	$data = 'var hodlData = {"netHashRate":197435,"exchangeRate":'. $exchangeRate . ',"reward":28050};';
 	file_put_contents($file, $data, LOCK_EX);
 ?>
