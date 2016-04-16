@@ -22,6 +22,10 @@ function calcInterest() {
 
 // attach events
 $("#userHash").keyup(updateReward);
+$("#miningHardware").change(function () {
+	$("#userHash").val($("#miningHardware").val());
+	updateReward();
+});
 $("#exchangeRate").text("Current Exchange Rate: $" + exchangeRate.toFixed(2));
 $("#netHashRate").text("Current Network Hashrate: " + netHashRate + " H/s");
 
