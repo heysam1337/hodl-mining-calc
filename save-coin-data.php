@@ -1,3 +1,5 @@
+#!/usr/local/bin/php
+
 <?php
 
 	$ch1 = curl_init();
@@ -38,6 +40,6 @@
 
 
 	$file = 'hodldata.js';
-	$data = 'var hodlData = {"netHashRate":'. $netHashRate . ',"exchangeRate":'. $exchangeRate . ',"reward":28050};';
+	$data = 'var hodlData = {"netHashRate":'. $netHashRate . ',"exchangeRate":'. $exchangeRate . ',"reward":28050,"updated":' . time() .'};';
 	file_put_contents($file, $data, LOCK_EX);
 ?>
