@@ -26,7 +26,7 @@ $("#miningHardware").change(function () {
 	$("#userHash").val($("#miningHardware").val());
 	updateReward();
 });
-$("#exchangeRate").text("Current Exchange Rate: $" + exchangeRate.toFixed(2));
+$("#exchangeRate").text("Current Exchange Rate: $" + exchangeRate.toFixed(5));
 $("#netHashRate").text("Current Network Hashrate: " + netHashRate + " H/s");
 
 

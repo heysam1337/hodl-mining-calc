@@ -39,7 +39,7 @@
 	$exchangeRate = $resp1->hodl_btc->last * $resp2->btc_usd->last;
 
 
-	$file = 'hodldata.js';
+	$file = dirname(__FILE__) . '/hodldata.js';
 	$data = 'var hodlData = {"netHashRate":'. $netHashRate . ',"exchangeRate":'. $exchangeRate . ',"reward":28050,"updated":' . time() .'};';
 	file_put_contents($file, $data, LOCK_EX);
 ?>
