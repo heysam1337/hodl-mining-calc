@@ -18,6 +18,10 @@ function updateReward() {
 
 function calcInterest() {
 
+	// get term deposits formula for interest and scenario section. 
+
+	var result;
+
 }
 
 // attach events
