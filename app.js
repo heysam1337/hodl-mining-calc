@@ -1,8 +1,3 @@
-// replace these with updating numbers, valid on 2016-04-11
-var tempNetHashRate = 126700; 
-var tempReward = 28050; // daily coins generated on the network
-var tempExchangeRate = 0.018;
-
 var netHashRate = hodlData.netHashRate;
 var exchangeRate = hodlData.exchangeRate;
 var reward = hodlData.reward;
