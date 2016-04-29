@@ -29,18 +29,24 @@ function updateScenario() {
 	// compound interest forumla: A = P ( 1+r ) ^ t
 
 	var standardInterestRate = Math.pow(0.5,22); // (1/2^22) compounded every block
-	//var standardInterestDuringTerm = 
+	
+	var standardInterestDuringTerm;
+	var bonusInterestDuringTerm;
+	var depositInterestDuringTerm;
+	var effectiveInterest = standardInterestDuringTerm + bonusInterestDuringTerm + depositInterestDuringTerm;
+	var totalCoins = principal + effectiveInterest;
 
 
 	// bonus interest
 	// Principal + (Standard Interest + (Bonus Interest * Bonus Multiplier))
 	var bonusInterest; // Compounded, the rate is 2174%. It's reduced every block by a multiplier - calculated like this =((409530-X)/409530)^4 (X is the block where the balance is recorded as an output).
+	var maxBonusRate = Math.pow(0.5,16);
 	var bonusMultipler = Math.pow(((409530 - currentBlock) / 409530), 4);
 
 	// Full bonus on term is Principal + ((Standard Interest + (Bonus Interest * Bonus Multiplier))*Term Deposit Multiplier)
 	var termDepositMultipler; // (1-((409530-X)/409530)^6)*100  X is number of blocks to lock for, min 2 days, max 1 year
 
-	var totalCoins;
+
 
 
 
