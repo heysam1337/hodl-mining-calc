@@ -30,7 +30,10 @@ function updateScenario() {
 
 	var standardInterestRate = Math.pow(0.5,22); // (1/2^22) compounded every block
 	
-	var standardInterestDuringTerm;
+	var standardInterestDuringTerm = (principal * Math.pow(1 + standardInterestRate, blocksDuringTerm)) - principal;
+	
+
+
 	var bonusInterestDuringTerm;
 	var depositInterestDuringTerm;
 	var effectiveInterest = standardInterestDuringTerm + bonusInterestDuringTerm + depositInterestDuringTerm;
