@@ -38,13 +38,13 @@ function updateScenario() {
 	var bonusInterestDuringTerm = (principal * Math.pow(1 + maxBonusRate * bonusMultipler, blocksDuringTerm)) - principal; 
 
 	// Full bonus on term is Principal + ((Standard Interest + (Bonus Interest * Bonus Multiplier))*Term Deposit Multiplier)
-	var termDepositMultipler = (1-((409530-blocksDuringTerm)/409530)^6)*100;  // (1-((409530-X)/409530)^6)*100  X is number of blocks to lock for, min 2 days, max 1 year
-
+	var termDepositMultipler = (1-((409530-blocksDuringTerm)/409530)^6)*100;  // (1-((409530-X)/409530)^6)*100  X is number of blocks to lock for, min 2 days, max 1 yearm
 	var effectiveBonus = (standardInterestDuringTerm + bonusInterestDuringTerm) * termDepositMultipler;
-
 	var depositInterestDuringTerm = effectiveBonus - standardInterestDuringTerm - bonusInterestDuringTerm;
 
 	var totalCoins = principal + effectiveBonus;
+
+	var futureExchangeScenario; // get from form
 
 }
 
