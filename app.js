@@ -60,7 +60,7 @@ $("#miningHardware").change(function () {
 var netInfoString = "<b>Exchange Rate:</b> $" + exchangeHODLUSD.toFixed(5);
 netInfoString = netInfoString + "<br /><b>HODL to BTC:</b> " + exchangeHODLBTC.toFixed(8);
 netInfoString = netInfoString + "<br /><b>BTC to USD:</b> $" + exchangeBTCUSD.toFixed(2);
-netInfoString = netInfoString + "<br /><br /><b>Current Block:</b> " + currentBlock;
+//netInfoString = netInfoString + "<br /><br /><b>Current Block:</b> " + currentBlock;
 netInfoString = netInfoString + "<br /><b>Network Hashrate:</b> " + netHashRate;
 
 

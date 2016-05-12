@@ -49,6 +49,6 @@
 
 	$file = dirname(__FILE__) . '/hodldata.js';
 	//$data = 'var hodlData = {"netHashRate":'. $netHashRate . ',"exchangeHODLBTC":' . number_format($exchangeHODLBTC, 8) . ',"exchangeBTCUSD":'. $exchangeBTCUSD . ',"lastBlock":'. $lastBlock . ',"reward":28050,"updated":' . time() .'};';
-	$data = 'var hodlData = {"netHashRate":'. $netHashRate . ',"exchangeHODLBTC":' . number_format($exchangeHODLBTC, 8) . ',"exchangeBTCUSD":'. $exchangeBTCUSD . ',"lastBlock":'. '100' . ',"reward":28050,"updated":' . time() .'};';	
+	$data = 'var hodlData = {"netHashRate":'. $netHashRate . ',"exchangeHODLBTC":' . number_format($exchangeHODLBTC, 8) . ',"exchangeBTCUSD":'. $exchangeBTCUSD . ',"lastBlock":'. '53694' . ',"reward":28050,"updated":' . time() .'};';	
 	file_put_contents($file, $data, LOCK_EX);
 ?>
