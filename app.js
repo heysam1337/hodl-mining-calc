@@ -46,7 +46,7 @@ function updateScenario() {
 
 	var futureExchangeScenario; // get from form
 
-	var scenarioText = "Under this scenario you will have X Hodl with a total value of Y"; // placeholder
+	var scenarioText = "Under this scenario you will have X Hodl with a total value of Y"; // placeholder 
 
 }
 
