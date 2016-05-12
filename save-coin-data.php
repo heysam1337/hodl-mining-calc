@@ -27,7 +27,7 @@
 	$ch3 = curl_init();
 	curl_setopt_array($ch3, array(
     	CURLOPT_RETURNTRANSFER => 1,
-    	CURLOPT_URL => 'http://www.tekyexplorer.xyz/hodl/api_fetch.php?method=getmininginfo',
+    	CURLOPT_URL => 'http://www.fuzzbawls.pw/explore/HOdlcoin/api_fetch.php?method=getnetworkhashps',
     	CURLOPT_USERAGENT => 'HodlCoin Miner'
 	));
 	
@@ -38,7 +38,7 @@
 	$exchangeHODLBTC = $resp1->hodl_btc->last;
 	$exchangeBTCUSD = $resp2->btc_usd->last;
 
-	$netHashRate = $resp3->data->networkhashps;
+	$netHashRate = $resp3->data;
 	$lastBlock = $resp3->data->blocks;
 
 
