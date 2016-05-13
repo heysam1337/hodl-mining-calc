@@ -39,16 +39,16 @@
 	$exchangeBTCUSD = $resp2->btc_usd->last;
 
 	$netHashRate = $resp3->data;
-	//$lastBlock = $resp3->data->blocks;
-
+	
 	// last block api is broken, fix when avaialable
-
+	$lastBlock = 54484;
 
 	//$exchangeRate = $exchangeHODLBTC * $exchangeBTCUSD;
 
 
+
 	$file = dirname(__FILE__) . '/hodldata.js';
-	//$data = 'var hodlData = {"netHashRate":'. $netHashRate . ',"exchangeHODLBTC":' . number_format($exchangeHODLBTC, 8) . ',"exchangeBTCUSD":'. $exchangeBTCUSD . ',"lastBlock":'. $lastBlock . ',"reward":28050,"updated":' . time() .'};';
-	$data = 'var hodlData = {"netHashRate":'. $netHashRate . ',"exchangeHODLBTC":' . number_format($exchangeHODLBTC, 8) . ',"exchangeBTCUSD":'. $exchangeBTCUSD . ',"lastBlock":'. '53694' . ',"reward":28050,"updated":' . time() .'};';	
+	$data = 'var hodlData = {"netHashRate":'. $netHashRate . ',"exchangeHODLBTC":' . number_format($exchangeHODLBTC, 8) . ',"exchangeBTCUSD":'. $exchangeBTCUSD . ',"lastBlock":'. $lastBlock . ',"reward":28050,"updated":' . time() .'};';
+	
 	file_put_contents($file, $data, LOCK_EX);
 ?>
