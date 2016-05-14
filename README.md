@@ -4,3 +4,5 @@ Mining calculator for Hodl. Gives earnings estimates based on tested CPUs, curre
 
 Exchange data pulled from yobit.net
 Network data pulled from fuzzbawls.pw
+
+Last Block api is down and value is currently incorrect
