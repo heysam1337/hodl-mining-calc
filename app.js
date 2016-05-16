@@ -45,8 +45,9 @@ function updateScenario() {
 	var totalCoins = principal + effectiveBonus;
 
 	var futureExchangeScenario; // get from form
-
-	var scenarioText = "Under this scenario you will have X Hodl with a total value of Y"; // placeholder 
+	var futureValue = totalCoins * futureExchangeScenario;
+ 
+	var scenarioText = "Under this scenario you will have " + totalCoins + " Hodl with a total USD value of $" + futureValue;  
 
 }
 
@@ -60,12 +61,11 @@ $("#miningHardware").change(function () {
 var netInfoString = "<b>Exchange Rate:</b> $" + exchangeHODLUSD.toFixed(5);
 netInfoString = netInfoString + "<br /><b>HODL to BTC:</b> " + exchangeHODLBTC.toFixed(8);
 netInfoString = netInfoString + "<br /><b>BTC to USD:</b> $" + exchangeBTCUSD.toFixed(2);
-//netInfoString = netInfoString + "<br /><br /><b>Current Block:</b> " + currentBlock;
+netInfoString = netInfoString + "<br /><br /><b>Current Block:</b> " + currentBlock;
 netInfoString = netInfoString + "<br /><b>Network Hashrate:</b> " + netHashRate;
 
 
 $("#networkInfo").html(netInfoString);
-
 
 $("#exchangeRate").html("Exchange Rate: $" + exchangeHODLUSD.toFixed(5) + "<br /> (HODL to BTC: " + exchangeHODLBTC.toFixed(8) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BTC to USD:" + exchangeBTCUSD.toFixed(2) +")");
 
