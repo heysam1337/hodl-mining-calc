@@ -21,8 +21,8 @@ function updateScenario() {
     var blockTime = 154; // in seconds
     var blocksPerDay = (24*60*60) / 154; // 561.038961
 
-	var principal; // initial investment, get from form
-	var term; // in days, get from form
+	var principal = $("#principal").val(); // initial investment, get from form
+	var term = $("#term").val(); // in days, get from form
 	var blocksDuringTerm = blocksPerDay * term;
 
 	// compound interest forumla: A = P ( 1+r ) ^ t
@@ -44,7 +44,7 @@ function updateScenario() {
 
 	var totalCoins = principal + effectiveBonus;
 
-	var futureExchangeScenario; // get from form
+	var futureExchangeScenario = $("#futureExchangeScenario").val(); // get from form
 	var futureValue = totalCoins * futureExchangeScenario;
  
 	var scenarioText = "Under this scenario you will have " + totalCoins + " Hodl with a total USD value of $" + futureValue;  
