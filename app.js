@@ -32,7 +32,7 @@ function updateScenario() {
 
 	// bonus interest
 	// Principal + (Standard Interest + (Bonus Interest * Bonus Multiplier))
-	var bonusInterest; // Compounded, the rate is 2174%. It's reduced every block by a multiplier - calculated like this =((409530-X)/409530)^4 (X is the block where the balance is recorded as an output).
+	//var bonusInterest; // Compounded, the rate is 2174%. It's reduced every block by a multiplier - calculated like this =((409530-X)/409530)^4 (X is the block where the balance is recorded as an output).
 	var maxBonusRate = Math.pow(0.5,16);
 	var bonusMultipler = Math.pow(((409530 - currentBlock) / 409530), 4);
 	var bonusInterestDuringTerm = (principal * Math.pow(1 + maxBonusRate * bonusMultipler, blocksDuringTerm)) - principal; 
