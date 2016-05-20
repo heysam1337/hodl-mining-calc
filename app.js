@@ -68,6 +68,7 @@ netInfoString = netInfoString + "<br /><b>Network Hashrate:</b> " + netHashRate;
 $("#networkInfo").html(netInfoString);
 
 $("#exchangeRate").html("Exchange Rate: $" + exchangeHODLUSD.toFixed(5) + "<br /> (HODL to BTC: " + exchangeHODLBTC.toFixed(8) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BTC to USD:" + exchangeBTCUSD.toFixed(2) +")");
+("#term").val(exchangeHODLUSD);
 
 
 
