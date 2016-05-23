@@ -23,6 +23,7 @@ function updateScenario() {
 
 	var principal = $("#principal").val(); // initial investment, get from form
 	var term = $("#term").val(); // in days, get from form
+	var futureExchangeScenario = $("#futureExchangeScenario").val(); // get from form
 	var blocksDuringTerm = blocksPerDay * term;
 
 	// compound interest forumla: A = P ( 1+r ) ^ t
@@ -43,11 +44,10 @@ function updateScenario() {
 	var depositInterestDuringTerm = effectiveBonus - standardInterestDuringTerm - bonusInterestDuringTerm;
 
 	var totalCoins = principal + effectiveBonus;
-
-	var futureExchangeScenario = $("#futureExchangeScenario").val(); // get from form
 	var futureValue = totalCoins * futureExchangeScenario;
- 
-	var scenarioText = "Under this scenario you will have " + totalCoins + " Hodl with a total USD value of $" + futureValue;  
+	var scenarioString = "Under this scenario you will have " + totalCoins + " Hodl with a total USD value of $" + futureValue;
+
+	$("#scenario").html(scenarioString);
 
 }
 
@@ -58,17 +58,19 @@ $("#miningHardware").change(function () {
 	updateReward();
 });
 
+$("#term").keyup(updateScenario);
+$("#principal").keyup(updateScenario);
+$("#futureExchangeScenario").keyup(updateScenario);
+
 var netInfoString = "<b>Exchange Rate:</b> $" + exchangeHODLUSD.toFixed(5);
 netInfoString = netInfoString + "<br /><b>HODL to BTC:</b> " + exchangeHODLBTC.toFixed(8);
 netInfoString = netInfoString + "<br /><b>BTC to USD:</b> $" + exchangeBTCUSD.toFixed(2);
 netInfoString = netInfoString + "<br /><br /><b>Current Block:</b> " + currentBlock;
 netInfoString = netInfoString + "<br /><b>Network Hashrate:</b> " + netHashRate;
 
-
 $("#networkInfo").html(netInfoString);
-
 $("#exchangeRate").html("Exchange Rate: $" + exchangeHODLUSD.toFixed(5) + "<br /> (HODL to BTC: " + exchangeHODLBTC.toFixed(8) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BTC to USD:" + exchangeBTCUSD.toFixed(2) +")");
-$("#term").val(exchangeHODLUSD);
+$("#term").val(exchangeHODLUSD); // set default predicted exchange rate
 
 
 
